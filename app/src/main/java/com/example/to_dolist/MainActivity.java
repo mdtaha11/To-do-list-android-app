@@ -44,8 +44,7 @@ public class MainActivity extends AppCompatActivity {
     final List<String> list= new ArrayList<>();
 
 
-    int j=1;
-     ArrayList<String> items;
+
 
 
     @Override
@@ -62,12 +61,12 @@ public class MainActivity extends AppCompatActivity {
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, final int i, long l) {
+            public void onItemClick(AdapterView<?> parent, View view, final int i, long l) {
                 AlertDialog dialog=new AlertDialog.Builder(MainActivity.this)
                 .setTitle("Delete this task?")
                 .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override
-                    public void onClick(DialogInterface dialogInterface, int which) {
+                    public void onClick(DialogInterface dialog , int which) {
                         list.remove(i);
                         adapter.setData(list);
                     }
@@ -96,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
                                 @Override
                                 public void onClick(DialogInterface dialogInterface, int i) {
 
-                                   list.add((j++)+"." + " " +taskInput.getText().toString());
+                                   list.add(taskInput.getText().toString());
 
 
                                     adapter.setData(list);
