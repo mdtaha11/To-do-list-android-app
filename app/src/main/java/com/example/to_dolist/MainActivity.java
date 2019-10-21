@@ -191,13 +191,22 @@ class TextAdapter extends BaseAdapter {
     @Override
     public View getView(int position,View convertView, ViewGroup parent) {
 
-        LayoutInflater inflater = (LayoutInflater) MainActivity.this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View rowView=null;
 
-        View rowView = inflater.inflate(R.layout.items, parent, false);
-        TextView textView =  rowView.findViewById(R.id.task);
+        LayoutInflater inflater;
 
-        textView.setText(list.get(position));
+
+        if (convertView == null) {
+            inflater = (LayoutInflater) MainActivity.this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
+
+            rowView = inflater.inflate(R.layout.items, parent, false);
+            TextView textView = rowView.findViewById(R.id.task);
+
+            textView.setText(list.get(position));
+        }
         return rowView;
+
 
     }
     }
