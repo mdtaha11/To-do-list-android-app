@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
     final List<String> list= new ArrayList<>();
 
+
     int j=1;
      ArrayList<String> items;
 
@@ -193,7 +194,7 @@ class TextAdapter extends BaseAdapter {
         LayoutInflater inflater = (LayoutInflater) MainActivity.this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         View rowView = inflater.inflate(R.layout.items, parent, false);
-        TextView textView = (TextView) rowView.findViewById(R.id.task);
+        TextView textView =  rowView.findViewById(R.id.task);
 
         textView.setText(list.get(position));
         return rowView;
