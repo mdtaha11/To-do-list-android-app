@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">To-do List</string>
+    <string name="action_settings">Settings</string>
+    <string name="a">+</string>
+    <string name="aaa">+</string>
+    <string name="to_do_list">To-do List</string>
+    <string name="what_is_your_task">What is your task?</string>
+    <string name="enter_here">Enter Here</string>
+    <string name="done">Done</string>
+</resources>
